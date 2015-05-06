@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset='UTF-8'>
+    <link href="img/sw.ico" rel="shortcut icon" type="image/x-icon">
+
+    <title>Startup Weekend MTY</title>
+	<meta property="og:title" content="Startup Weekend MTY">
+	<meta name="description" content="Lanza tu propia empresa en 54 horas. Trabaja durante un fin de semana junto a diseñadores, desarrolladores y gente de negocios. No talk. All action.">
+	<meta property="og:description" content="Lanza tu propia empresa en 54 horas. Trabaja durante un fin de semana junto a diseñadores, desarrolladores y gente de negocios. No talk. All action.">
+	<!--check the domain in absolute url-->
+	<meta property="og:image" content="http://www.startupweekendmty.org/img/swlogoFb.png"> 
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1020">
+	<meta property="og:image:height" content="537">
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-61610320-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	
+    <script src=
+    "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type=
+    "text/javascript"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true" type=
+    "text/javascript"></script>
+    <script src="js/gmaps.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	function init_map() {
+                var myOptions = {
+                   div: '#mapa',
+					  zoom:17,
+					  panControl : false,
+					  zoomControl : true,
+					  scrollwheel: false,
+                    center: new google.maps.LatLng(25.725608, -100.311267),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("mapa"), myOptions);
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(25.725608, -100.311267)
+                });
+     
+		    infowindow = new google.maps.InfoWindow({
+                    content: "<b>Centro de Innovación y Diseño</b><br/><p>Facultad de Arquitectura de la UANL. Se encuentra detrás de Rectoría, al lado de la Sala Polivalente<\/p>"
+                });
+		 google.maps.event.addListener(marker, "click", function () {
+                    infowindow.open(map, marker);
+                });
+                infowindow.open(map, marker);
+            }
+            google.maps.event.addDomListener(window, "load", init_map);
+
+    </script>
+    <!--Add Bootstrap CSS-->
+    <link href=
+    "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel=
+    "stylesheet">
+    <!--Add Bootstrap JS-->
+    <script src=
+    "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!--Add Font Awesome-->
+    <link href=
+    "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css"
+    rel="stylesheet" type="text/css">
+    <!--Add Responsive-nav-->
+    <link href="responsive-nav/responsive-nav.css" rel="stylesheet">
+    <!--Add my own CSS-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section class="action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="nav-collapse">
+                        <ul>
+							<li><a href="#perfiles">Perfiles</a></li>
+                            <li><a href="#agenda">Agenda</a></li>
+							<!--li><a href="#recursos">Recursos</a></li-->
+
+                            <li><a href="#sede">Sede</a></li>
+							 <!--li><a target="new" href="https://www.facebook.com/swmty">Facebook</a></li-->
+							
+                            <li><a href="#mentores">Mentores/Jueces</a></li>
+
+                            <li><a href="bootcamp.html">Talleres Previos</a></li>
+							
+                            <li><a href="#organizaciones">Organizaciones</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="object" class="col-md-5 message"><img class="logo" src=
+                "img/swlogo.png"></div>
+
+                <div class="col-md-7 intro">
+                    <div>
+                        <h1>Lanza tu propia empresa en 54 horas</h1>
+						<h2 style="color:white;">No Talk. All Action. </h2>
+                        <a id="buyButtonMain" href=
+                        "http://swmty.eventbrite.com"
+                        target="_blank">Comprar boleto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="description">
+	<div class="container">
+	<h2>Comienza tu gran proyecto</h2>
+	<div class="row">
+		<div class="col-md-5">
+		<h3>Durante un fin de semana podrás probar tu idea de negocio y conocer
+                        personas de distintos perfiles ansiosas por cambiar el mundo. Te acompañarán expertos de distintas áreas que resolverán tus dudas y te guiarán en el camino.</h3>
+		</div>
+		<div class="col-md-7">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/cPScUWwP6ec" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	</div>
+	</section>
+		<section id="perfiles" class="tickets">
+        <div class="container">
+            <h2>Perfiles</h2>
+            <h3>Seas estudiante o profesionista, Startup Weekend tiene un lugar para ti.</h3>
+            <div class="row">
+                <div class="col-md-3 text-justify">
+                    <i class="fa fa-pencil fa-4x"></i>
+                    <h4>Diseño</h4>
+
+                    <p>Te apasiona la funcionalidad con estética y buscas que
+                    las personas disfruten de una experiencia única,
+                    innovadora e intuitiva</p>
+                </div>
+
+                <div class="col-md-3 col-md-offset-1 text-justify">
+                    <i class="fa fa-terminal fa-4x"></i>
+                    <h4>Desarrollo</h4>
+
+                    <p>Te apasionan los retos técnicos, lo tuyo es crear
+                    tecnología para resolver problemas de manera
+                    contundente</p>
+                </div>
+
+                <div class="col-md-3 col-md-offset-1 text-justify">
+                    <i class="fa fa-suitcase fa-4x"></i>
+                    <h4>Negocios</h4>
+
+                    <p>Tienes habilidades de negociación, consigues tus
+                    objetivos de una manera creativa y ves los retos como
+                    oportunidades</p>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                         <div class="col-md-6 col-md-offset-3">
+                            <a id="buyButtonRoles" href=
+                            "http://swmty.eventbrite.com"
+                            target="_blank">Comprar boleto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+			
+			<section id="agenda" class="agenda schedule schedule-with-text">
+				<div class="container">
+						  <h2>Agenda</h2>
+						  <h3>Arma un equipo, construye la idea, sal a venderla y gana la competencia.</h3>
+					<div class="row">
+						
+						
+						<div class="col-md-4">
+							<h3>Viernes 15 Mayo</h3>
+							<ul class="schedule-overview">
+								<li>
+									<div class="schedule-title">
+										<span class="time">6:30 pm</span>
+										<span class="title">Registro</span>
+									</div>
+									
+									<!--div class="schedule-text">
+										<p>
+											Follows the people racing to bring the hot new 3D printing technology to your home, documenting the "Macintosh Moment" of this revolution and exploring what it takes to live the American Dream.
+										</p>
+									</div-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">7:00 pm</span>
+										<span class="title">Lunch y networking</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">7:30 pm</span>
+										<span class="title">Bienvenida</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">8:00 pm</span>
+										<span class="title">Pitches</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								<li>
+									<div class="schedule-title">
+										<span class="time">8:40 pm</span>
+										<span class="title">Votación y formación de equipos</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+																<li>
+									<div class="schedule-title">
+										<span class="time">9:00 pm</span>
+										<span class="title">Comienza a trabajar</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<h3>Sábado 16 Mayo</h3>
+							<ul class="schedule-overview">
+								<li>
+									<div class="schedule-title">
+										<span class="time">9:00 am</span>
+										<span class="title">Desayuno</span>
+									</div>
+									
+									<!--div class="schedule-text">
+										<p>
+											A feature-length documentary about our complex relationship with manufactured objects and, by extension, the people who design them.
+										</p-->
+									</div-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">10:00 am</span>
+										<span class="title">Trabaja en tu prototipo</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">1:00 p.m.</span>
+										<span class="title">Comida</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">2:00 pm</span>
+										<span class="title">Consigue tus primeros clientes</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								<li>
+									<div class="schedule-title">
+										<span class="time">8:00 p.m.</span>
+										<span class="title">Cena</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								<li>
+									<div class="schedule-title">
+										<span class="time">9:00 p.m.</span>
+										<span class="title">Ya tienes algo que mostrar</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<h3>Domingo 17 Mayo</h3>
+							<ul class="schedule-overview">
+								<li>
+									<div class="schedule-title">
+										<span class="time">9:00 am</span>
+										<span class="title">Desayuno</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">10:00 am</span>
+										<span class="title">Mejora los últimos detalles</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">1:00 pm</span>
+										<span class="title">Comida</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								
+								<li>
+									<div class="schedule-title">
+										<span class="time">2:00 pm</span>
+										<span class="title">Practica tu pitch</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+								<li>
+									<div class="schedule-title">
+										<span class="time">4:00 pm</span>
+										<span class="title">Presentaciones finales</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+																<li>
+									<div class="schedule-title">
+										<span class="time">6:00 pm</span>
+										<span class="title">Cierre y premiación</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+							</ul>
+						</div>
+
+						
+					</div><!--end of row-->
+				</div><!--end of container-->
+			</section>
+	
+
+
+    <section id="mentores" class="mentores">
+        <div class="container">
+            <h2>Mentores</h2>
+
+            <h3>Aterrizarás tus ideas junto a estas personas. Escucha sus consejos.</h3>
+
+            <div class="row">
+               <div class="col-md-3 mentor">
+               		<a target="_blank" href="https://twitter.com/adriancuadros">
+                    <img alt="Adrian Cuadros" class="img-circle" src=
+                    "img/personas/adrian.jpg">
+                    <h4>Adrian Cuadros</h4>
+                	</a>
+                     <p>Co-fundador @Innku</p>
+                </div>
+
+
+                <div class="col-md-3 mentor">
+                	<a target="_blank" href="https://mx.linkedin.com/in/caguirrer">
+                    <img alt="Christian Aguirre" class="img-circle" src=
+                    "img/personas/christian.png">
+                    <h4>Christian Aguirre</h4>
+                	</a>
+                	<p>Senior Analyst @Alta Ventures Mexico. </p>
+                </div>
+
+                <div class="col-md-3 mentor">
+                	<a target="_blank" href="http://eldelentes.mx">
+                    <img alt="Eduardo Higareda" class="img-circle" src=
+                    "img/personas/lentes.jpeg">
+
+                    <h4>Eduardo Higareda</h4>
+                	</a>
+                    <p>Lead Designer @Icalia Labs</p>
+                </div>
+
+
+                 <div class="col-md-3 mentor">
+                 	<a target="_blank" href="https://twitter.com/elmundoverdees">
+                    <img alt="Edén Candelas" class="img-circle" src=
+                    "img/personas/eden.png">
+
+                    <h4>Edén Candelas</h4>
+                	</a>
+                    <p>Co-fundador @Hackerspace Monterrey
+					</p>
+				</div>
+			
+				 <div class="col-md-3 mentor">
+				 	<a target="_blank" href="https://mx.linkedin.com/pub/ernesto-galv%C3%A1n-contreras/9/843/905">
+                    <img alt="Ernesto Galván" class="img-circle" src=
+                    "img/personas/ernesto.jpg">
+
+                    <h4>Ernesto Galván</h4>
+                   	</a>
+                    <p>Fundador @Bbxm Studios</p>
+                </div>
+
+                 <div class="col-md-3 mentor">
+                 	<a target="_blank" href="http://twitter.com/jorgeRibs">
+                    <img alt="Jorge Ribs" class="img-circle" src=
+                    "img/personas/jorgeRibs.jpg">
+
+                    <h4>Jorge Ribs</h4>
+                    </a>
+                    <p>Co-Fundador @Bridgefy </p>
+                </div>
+
+              
+
+                 <div class="col-md-3 mentor">
+                 	<a target="_blank" href="https://www.linkedin.com/in/satuelisa">
+                    <img alt="Elisa Schaeffer" class="img-circle" src=
+                    "img/personas/elisa.jpg">
+
+                    <h4>Elisa Schaeffer</h4>
+                	</a>
+                    <p>Profesora Investigadora @UANL</p>
+                </div>
+			
+				  <div class="col-md-3 mentor">
+				  	<a target="_blank" href="http://www.twitter.com/digaresc">
+
+                    <img alt="Diego García" class="img-circle" src=
+                    "img/personas/diegoGarcia.jpg">
+
+                    <h4>Diego García</h4>
+                	</a>
+
+                    <p>Co-fundador de Bridgefy</p>
+                </div>
+
+
+                <div class="col-md-3 mentor">
+                	<a target="_blank" href="http://www.twitter.com/patosainz">
+                    <img alt="José Sainz" class="img-circle" src=
+                    "img/personas/pato.jpg">
+
+                    <h4>José Sainz</h4>
+                	</a>
+                    <p>Co-fundador @Printoo</p>
+                </div>
+
+
+                 <div class="col-md-3 mentor">
+                 	<a target="_blank" href="http://www.twitter.com/crespofederico">
+                    <img alt="Federico Crespo" class="img-circle" src=
+                    "img/personas/fede.jpeg">
+
+                    <h4>Federico Crespo</h4>
+                	</a>
+                    <p>Co-fundador @Disruptive Angels</p>
+                </div>
+
+              
+
+              <div class="col-md-3 mentor">
+              	<a target="_blank" href="http://www.twitter.com/sebastian5000">
+                    <img alt="Sebastián Gutiérrez" class="img-circle" src=
+                    "img/personas/sebastian.jpg">
+
+                    <h4>Sebastián Gutiérrez</h4>
+                </a>
+                    <p>Lead Designer @Reserbus</p>
+                </div>
+
+              	  <div class="col-md-3 mentor">
+              	  	<a target="_blank" href="https://twitter.com/DezkaReid">
+                    <img alt="Joel Gómez" class="img-circle" src=
+                    "img/personas/joel.jpeg">
+
+                    <h4>Joel Gómez</h4>
+                	</a>
+
+                    <p>Software Engineer @Icalia Labs.</p>
+                </div>
+
+             </div>    
+
+            <h2>Jueces</h2>
+            <h3>Elegirán a los tres equipos ganadores.</h3>
+            <div class="row">
+
+                 <div class="col-md-3 mentor">
+                 	<a target="_blank" href="https://twitter.com/psykohack">
+                    <img alt="Carlos Toxtli" class="img-circle" src=
+                    "img/personas/toxtli.jpg">
+                    <h4>Carlos Toxtli</h4>
+                	</a>
+                    <p>Co-foundador @Compropago </p>
+                </div>
+
+                 <div class="col-md-3 mentor">
+                 	<a target="_blank" href="https://twitter.com/capemprendedor">
+                    <img alt="Rogelio De Los Santos" class="img-circle" src=
+                    "img/personas/rogelio.jpg">
+                    <h4>Rogelio De Los Santos</h4>
+                	</a>
+                	<p>Early Stage Investor and Mentor</p>
+                </div>
+
+
+
+            </div>
+                
+            </div>
+    </section>
+
+		<!--section id="recursos" class="categories">
+	<div class="container">
+		<h2>Recursos para tu idea</h2>
+		<h3>Además del apoyo de mentores y otros asistentes, de acuerdo al tipo de idea tendrás recursos especiales.</h3>
+	<div class="row">
+                <div class="col-md-3 text-justify">
+                    <i class="fa fa-users fa-4x"></i>
+                    <h4>Social</h4>
+					<h5>Mejora las condiciones de vida de la sociedad. Contarás con datos abiertos del gobierno.</h5>
+                </div>
+				<div class="col-md-3 col-md-offset-1 text-justify">
+                    <i class="fa fa-gear fa-4x"></i>
+                    <h4>Maker</h4>
+					<h5>Crea algo tangible en un fin de semana. Habrá impresoras 3D, Arduinos y otras tarjetas inteligentes.</h5>
+                </div>
+				<div class="col-md-3 col-md-offset-1 text-justify">
+                    <i class="fa fa-flask fa-4x"></i>
+                    <h4>Freestyle</h4>
+					<h5>Trabaja sobre cualquier idea. Tendrás recursos tecnológicos como dominios gratis, hosting y otros servicios.</h5>
+                </div>
+	
+	</div>
+	</div>
+	</section-->
+	
+    <section id="sede" class="lugar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Sede</h2>
+
+                    <h3>Centro de Innovación y Diseño. UANL.</h3>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-md-5 col-md-offset-1" id="mapa"></div>
+
+                <div class="col-md-5 col-md-offset-1">
+                	<img class="img-responsive" src="img/cidMapa.png"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="organizaciones" class="patrocinadores">
+        <div class="container">
+            <h2>Organizaciones</h2>
+
+            <h3>Imposible sin su apoyo.</h3>
+
+            <div class="row">
+
+            	<div class="col-md-4">
+					<a target="_blank" href="https://www.facebook.com/pages/Nexo-BanRegio/295531997287247">
+					<img src="img/sponsors/nexo_banregio.png"/></a>
+				</div>
+
+				<div class="col-md-4">
+					<a target="_blank" href="https://www.facebook.com/BanRegio">
+					<img src="img/sponsors/banregio.png"/></a>
+				</div>
+
+                <div class="col-md-4">
+					<a target="_blank" href="http://www.zendesk.com.mx/?utm_source=online&utm_medium=organiconline&utm_campaign=SWMTY">
+					<img src="img/sponsors/zendesk.png"/></a>
+				</div>
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/cidfarq">
+					<img src="img/sponsors/cid.png"/></a>
+				</div>
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/ThePoolMX">
+					<img src="img/sponsors/thePool.png"/></a>
+				</div>
+				
+				<div class="col-md-3">
+					<br/>
+					<a target="_blank" href="https://www.facebook.com/elcowork">
+					<img src="img/sponsors/elCowork.png"/></a>
+				</div>
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/HubMonterrey">
+					<img src="img/sponsors/impactHub.png"/></a>
+				</div>
+
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/endeavormx">
+					<img src="img/sponsors/endeavor.png"/></a>
+				</div>
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/startupstudiomx">
+					<img src="img/sponsors/startupStudio.png"/></a>
+
+				</div>
+				
+				<div class="col-md-3">
+					<a target="_blank" href="http://rudix.me/">
+					<img src="img/sponsors/rudix.png"/></a>
+				</div>
+				
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/AkkyMX">
+					<img src="img/sponsors/akky.png"/></a>
+				</div>
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/LCIMonterrey">
+					<img src="img/sponsors/lci.png"/></a>
+				</div>
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/NaranyaGroup">
+					<img src="img/sponsors/naranya.png"/></a>
+				</div>
+
+				<div class="col-md-3">
+					<a target="_blank" href="#">
+					<img src="img/sponsors/sociables.png"/></a>
+				</div>
+
+
+				<div class="col-md-3">
+					<a target="_blank" href="https://www.facebook.com/pages/MIMEC/128033277212380">
+					<img src="img/sponsors/MIMEC.png"/></a>
+				</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <i class="fa fa-code"></i> con contribución de <a target="_blank" href="http://fb.com/JumpstartMty" target=
+                "_blank">Jumpstart MTY</a>
+            </div>
+        </div>
+    </footer><script src="responsive-nav/responsive-nav.js"></script><script src="js/index.js"></script><!-- Put this right before the </body> closing tag -->
+    <script>
+var nav = responsiveNav(".nav-collapse");
+    </script>
+</body>
+</html>
