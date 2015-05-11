@@ -47,13 +47,13 @@
 		
 				infowindow = new google.maps.InfoWindow({
 		content: "<p>Facultad de Contaduría Pública y Administración de la UANL<\/p>"
-			});
-					google.maps.event.addListener(marker, "click", function () {
-			infowindow.open(map, marker);
-			});
-			infowindow.open(map, marker);
-			}
-			google.maps.event.addDomListener(window, "load", init_map);
+				});
+						google.maps.event.addListener(marker, "click", function () {
+				infowindow.open(map, marker);
+				});
+				infowindow.open(map, marker);
+				}
+				google.maps.event.addDomListener(window, "load", init_map);
 			</script>
 			<!--Add Bootstrap CSS-->
 			<link href=
@@ -79,7 +79,8 @@
 									<nav class="nav-collapse">
 										<ul>
 											<li><a href="index.html">Qué es Startup Weekend?</a></li>
-											<li><a href="bootcamp.html">Talleres Previos</a></li>
+											<li><a href="bootcamp.html">Bootcamp Previo</a></li>
+											<li><a href="#registro">Registro</a></li>
 											<li><a href="#sede">Lugar</a></li>
 										</ul>
 									</nav>
@@ -90,10 +91,17 @@
 					
 					<section class="description">
 						<div class="container">
-							<h2>Talleres Startup Weekend</h2>
-							<h3>Aprende herramientas y metodologías que te ayudarán a construir tus ideas de negocio más rápido y mejor. Nos vemos en el CTIC de FACPYA (Ver <a href="#sede">mapa</a>). La entrada es gratis.</h3>
+							<h2>Bootcamp Startup Weekend</h2>
+							<h3>Aprende herramientas y metodologías para construir tus ideas de negocio más rápido y mejor. Nos vemos en el CTIC de FACPYA (Ver <a href="#sede">mapa</a>). La entrada es gratis.</h3>
 							<iframe class="bootcamp-iframe" src="https://docs.google.com/spreadsheets/d/1tfxdIHSj1bIJDJS6NUOqpzo4kMArIwKuID2tKAZzZyU/pubhtml?gid=2072066823&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 							
+							<div id="registro" class="row">
+								<h2>Registro</h2>
+								<h3>Solo es necesario que llenes la siguiente forma</h3>
+								<div class="col-md-8 col-md-offset-2">
+									<iframe src="https://docs.google.com/forms/d/1VOLDVcDdS5ZjczeDNBv_06OhBKJbAnflOcJ3ZKWs6Z4/viewform?embedded=true" width="760" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+								</div>
+							</div>
 							<div id="sede" class="row">
 								<div class="col-md-8">
 									<h2>Lugar</h2>
@@ -101,24 +109,25 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-md-8 col-md-offset-2" id="mapa"></div>
-								<!--div class="col-md-5 col-md-offset-1">
-									<img class="img-responsive" src="img/cidMapa.png"/>
-								</div-->
-							</div>
+								<div class="col-md-8">
+									<img class="img-responsive" src="img/croquisCTIC.jpg"/>
+								</div>
+								<div class="col-md-4" id="mapa"></div>
+								
 						</div>
-					</section>
-					
-					<footer>
-						<div class="container">
-							<div class="row">
-								<i class="fa fa-code"></i> con contribución de <a target="_blank" href="http://fb.com/JumpstartMty" target=
-								"_blank">Jumpstart MTY</a>
-							</div>
+					</div>
+				</section>
+				
+				<footer>
+					<div class="container">
+						<div class="row">
+							<i class="fa fa-code"></i> con contribución de <a target="_blank" href="http://fb.com/JumpstartMty" target=
+							"_blank">Jumpstart MTY</a>
 						</div>
-						</footer><script src="responsive-nav/responsive-nav.js"></script><script src="js/index.js"></script><!-- Put this right before the </body> closing tag -->
-						<script>
-						var nav = responsiveNav(".nav-collapse");
-						</script>
-					</body>
-				</html>
+					</div>
+					</footer><script src="responsive-nav/responsive-nav.js"></script><script src="js/index.js"></script><!-- Put this right before the </body> closing tag -->
+					<script>
+					var nav = responsiveNav(".nav-collapse");
+					</script>
+				</body>
+			</html>
