@@ -39,17 +39,17 @@
 					  panControl : false,
 					  zoomControl : true,
 					  scrollwheel: false,
-                    center: new google.maps.LatLng(25.725608, -100.311267),
+                    center: new google.maps.LatLng(25.725526,-100.311603),
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
                 map = new google.maps.Map(document.getElementById("mapa"), myOptions);
                 marker = new google.maps.Marker({
                     map: map,
-                    position: new google.maps.LatLng(25.725608, -100.311267)
+                    position: new google.maps.LatLng(25.725526,-100.311603)
                 });
      
 		    infowindow = new google.maps.InfoWindow({
-                    content: "<b>Centro de Innovación y Diseño</b><br/><p>Facultad de Arquitectura de la UANL. Se encuentra detrás de Rectoría, al lado de la Sala Polivalente<\/p>"
+                    content: "<b>Sala Polivalente</b><br/><p>Costado derecho de la entrada principal a la Facultad de Arquitectura y Diseño<\/p>"
                 });
 		 google.maps.event.addListener(marker, "click", function () {
                     infowindow.open(map, marker);
@@ -208,7 +208,7 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">7:00 pm</span>
+										<span class="time">6:50 pm</span>
 										<span class="title">Lunch y networking</span>
 									</div>
 									
@@ -227,7 +227,7 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">7:30 pm</span>
+										<span class="time">7:15 pm</span>
 										<span class="title">Bienvenida</span>
 									</div>
 									
@@ -243,6 +243,7 @@
 										<div class="bottom"></div>
 									</div>
 								</li><!--end of individual schedule item-->
+
 								
 								<li>
 									<div class="schedule-title">
@@ -264,7 +265,7 @@
 								</li><!--end of individual schedule item-->
 								<li>
 									<div class="schedule-title">
-										<span class="time">8:40 pm</span>
+										<span class="time">9:00 pm</span>
 										<span class="title">Votación y formación de equipos</span>
 									</div>
 									
@@ -282,7 +283,7 @@
 								</li><!--end of individual schedule item-->
 																<li>
 									<div class="schedule-title">
-										<span class="time">9:00 pm</span>
+										<span class="time">9:30 pm</span>
 										<span class="title">Comienza a trabajar</span>
 									</div>
 									
@@ -325,7 +326,7 @@
 								<li>
 									<div class="schedule-title">
 										<span class="time">10:00 am</span>
-										<span class="title">Trabaja en tu prototipo</span>
+										<span class="title">Construye la primera versión de tu idea</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -343,7 +344,7 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">1:00 p.m.</span>
+										<span class="time">2:00 p.m.</span>
 										<span class="title">Comida</span>
 									</div>
 									
@@ -362,7 +363,7 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">2:00 pm</span>
+										<span class="time">3:00 pm</span>
 										<span class="title">Consigue tus primeros clientes</span>
 									</div>
 									
@@ -459,7 +460,7 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">1:00 pm</span>
+										<span class="time">2:00 pm</span>
 										<span class="title">Comida</span>
 									</div>
 									
@@ -478,7 +479,7 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">2:00 pm</span>
+										<span class="time">3:00 pm</span>
 										<span class="title">Practica tu pitch</span>
 									</div>
 									
@@ -753,17 +754,17 @@
     <section id="sede" class="lugar">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-10">
                     <h2>Sede</h2>
 
-                    <h3>Centro de Innovación y Diseño. UANL.</h3>
+                    <h3>Sala Polivalente - Facultad de Arquitectura y Diseño. UANL.</h3>
                 </div>
             </div>
             <div class="row">
             	<div class="col-md-5 col-md-offset-1" id="mapa"></div>
 
                 <div class="col-md-5 col-md-offset-1">
-                	<img class="img-responsive" src="img/cidMapa.png"/>
+                	<img class="img-responsive" src="img/polivalente.png"/>
                 </div>
             </div>
         </div>
